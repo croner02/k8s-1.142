@@ -5,6 +5,7 @@ kubnetes 1.142版本部署，本地仓库，helm,dashboard 监控，nfs共享存
 ### 1、主机名修改，并设置本地解析
 
 `vim /etc/hosts  
+
 192.168.206.131  node01`  
 
 ### 2、系统服务优化
