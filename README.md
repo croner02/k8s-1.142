@@ -45,7 +45,7 @@ kubnetes 1.142版本部署，本地仓库，helm,dashboard 监控，nfs共享存
 `===============================================================================`    
 `^* 172.50.10.16                  3   6    17    13   +103us[  +12us] +/-   24ms`   
 
-## 二、kubernetes 1.142安装
+## 二、[kubernetes 1.142安装](https://github.com/croner02/k8s-1.142/blob/master/dashboard/README.md)
 
 ## 三、部署harbor本地仓库
 
