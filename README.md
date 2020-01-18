@@ -82,7 +82,7 @@ Kubelet负责与其他节点集群通信，并进行本节点Pod和容器生命�
 
 ### 6、部署master 节点
 注：在master节点上进行如下操作
-在master进行Kubernetes集群初始化。
+在master进行Kubernetes集群初始化。   
 `kubeadm init --kubernetes-version=1.14.2 \`   
 `--apiserver-advertise-address=192.168.206.131 \`   
 `--image-repository registry.aliyuncs.com/google_containers \`   
