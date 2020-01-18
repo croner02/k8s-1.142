@@ -148,7 +148,7 @@
 `    #    cpu: 100m`   
 ` ...`    
 `redis:`   
-`  # 如果使用外部的 Redis 服务，设置 type=external，然后补充 external 部分的连接信息。
+`  # 如果使用外部的 Redis 服务，设置 type=external，然后补充 external 部分的连接信息。`   
 `  type: internal`   
 `  internal:`   
 `    image:`   
