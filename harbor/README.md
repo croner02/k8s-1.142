@@ -9,7 +9,7 @@
 `cd harbor-helm`   
 `git checkout 1.0.0`   
 
-## 编辑 values配置文件
+## 3、编辑 values配置文件
 安装 Helm Chart 包最重要的当然是values.yaml文件了，我们可以通过覆盖该文件中的属性来改变配置：  
 
 `expose:`    
@@ -95,7 +95,7 @@
 `    # 详细文档地址：https://github.com/docker/distribution/blob/master/docs/configuration.md#redirect`   
 `    disableredirect: false`   
 `    # 指定存储类型："filesystem", "azure", "gcs", "s3", "swift", "oss"，在相应的区域填上对应的信息。`   
-`    # 如果你想使用 pv 则必须设置成"filesystem"类型   
+`    # 如果你想使用 pv 则必须设置成"filesystem"类型`      
 `    type: filesystem`   
 `    filesystem:`   
 `      rootdirectory: /storage`   
@@ -162,7 +162,7 @@
 `    tolerations: []`   
 `    affinity: {}`   
 `...`    
-##  执行部署
+##  4、执行部署
 `kubectl create namespace harbor`   
 `kubectl create serviceaccount --namespace kube-system tiller`    
 `kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller`   
@@ -196,14 +196,14 @@
 `registry=# CREATE TABLE schema_migrations(version bigint not null primary key, dirty boolean not null);`   
 `CREATE TABLE`   
 `registry-# \quit`   
-### Harbor Portal
+## 5、Harbor Portal
 添加完成后，在浏览器中输入registry.harbor.domain就可以打开熟悉的 Harbor 的 Portal 界面了，当然我们配置的 
 Ingress 中会强制跳转到 https，所以如果你的浏览器有什么安全限制的话，需要信任我们这里 Ingress 对应的证书，
 证书文件可以通过查看 Secret 资源对象获取：
 然后输入用户名：admin，密码：Harbor12345即可登录进入 Portal 首页：
 我们可以看到有很多功能，默认情况下会有一个名叫library的项目，改项目默认是公开访问权限的，
 进入项目可以看到里面还有 Helm Chart 包的管理，可以手动在这里上传，也可以对改项目里面的镜像进行一些配置，比如是否开启自动扫描镜像功能：
-### docker cli
+##  6、docker cli
 然后我们来测试下使用 docker cli 来进行 pull/push 镜像，由于上面我们安装的时候通过 Ingress
 来暴露的 Harbor 的服务，而且强制使用了 https，所以如果我们要在终端中使用我们这里的私有仓库的话，就需要配置上相应的证书：
 
