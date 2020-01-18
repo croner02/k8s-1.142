@@ -1,0 +1,8 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-storage
+provisioner: nfs-client-provisioner    #---动态卷分配应用设置的名称，必须和集群中的"nfs-provisioner"应用设置的变量名称保持一致
+parameters:
+  archiveOnDelete: "true"  #---设置为"false"时删除PVC不会保留数据,"true"则保留数据
+
