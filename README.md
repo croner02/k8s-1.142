@@ -102,6 +102,7 @@ Kubelet负责与其他节点集群通信，并进行本节点Pod和容器生命�
 `kubectl get cs`   
 
 ## 三、部署flannel网络
+`kubectl apply -f kube-flannel.yml`   
 
 ## 四、部署harbor本地仓库
 
