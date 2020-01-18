@@ -1,6 +1,6 @@
 # 部署Dashboard
 
-##方案一：nodePort访问：
+## 方案一：nodePort访问：
 注：在master节点上进行如下操作
 
 ### 1、因搭建了本地仓库，可以先把所依赖镜像先都下载到本地镜像仓库。
@@ -14,7 +14,7 @@
 `kubectl get pods -n kube-system -o wide`   
 `kubectl get services -n kube-system`   
 `netstat -ntlp|grep 30001`   
-### 4、在Firefox浏览器输入Dashboard访问地址：https://10.10.10.10:30001   `
+### 4、在Firefox浏览器输入Dashboard访问地址：https://10.10.10.10:30001   
 
 ## 方案二： ingress访问：
 
