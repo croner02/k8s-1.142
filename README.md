@@ -104,7 +104,7 @@ Kubelet负责与其他节点集群通信，并进行本节点Pod和容器生命�
 ## 三、部署flannel网络
 `kubectl apply -f kube-flannel.yml`   
 
-## 四、部署harbor本地仓库
+## 四、[部署harbor本地仓库](https://github.com/croner02/k8s-1.142/blob/master/harbor/README.md)
 
 ## 五、[部署Dashboard](https://github.com/croner02/k8s-1.142/blob/master/dashboard/README.md)
 
