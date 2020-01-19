@@ -106,7 +106,7 @@ Kubelet负责与其他节点集群通信，并进行本节点Pod和容器生命�
 
 ## 四、[部署helm](https://github.com/croner02/k8s-1.142/blob/master/helm/linux-amd64/HelmInstall_README.md)
 
-## 五、部署nginx-ingress
+## 五、[部署nginx-ingress](https://github.com/croner02/k8s-1.142/blob/master/ingress/README.md)
 
 ## 六、部署nfs持久化存储
 
