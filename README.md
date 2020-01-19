@@ -108,6 +108,6 @@ Kubelet负责与其他节点集群通信，并进行本节点Pod和容器生命�
 
 ## 五、[部署Dashboard](https://github.com/croner02/k8s-1.142/blob/master/dashboard/README.md)
 
-## 六、部署监控平台
+## 六、[部署监控平台](https://github.com/croner02/k8s-1.142/blob/master/prometheus/prometheus/README.md)
 
 
