@@ -102,28 +102,28 @@ $ vim grafana/grafana-deployment.yaml
 编辑 /etc/kubernetes/manifests/kube-scheduler.yaml 文件   
 $ vim /etc/kubernetes/manifests/kube-scheduler.yaml   
 将 command 的 bind-address 地址更改成 0.0.0.0   
-  ......   
-  spec:   
-    containers:   
-    - command:   
-      - kube-scheduler   
-      - --bind-address=0.0.0.0  #改为0.0.0.0   
-      - --kubeconfig=/etc/kubernetes/scheduler.conf   
-      - --leader-elect=true   
-  ......    
+`  ......`   
+`  spec:`   
+`    containers:`   
+`    - command:`   
+`      - kube-scheduler`   
+`      - --bind-address=0.0.0.0  #改为0.0.0.0`   
+`      - --kubeconfig=/etc/kubernetes/scheduler.conf`   
+`      - --leader-elect=true`     
+`  ......`    
 - 修改 kube-controller-manager 配置   
 编辑 /etc/kubernetes/manifests/kube-controller-manager.yaml 文件   
 $ vim /etc/kubernetes/manifests/kube-controller-manager.yaml   
 将 command 的 bind-address 地址更改成 0.0.0.0   
-  spec:   
-    containers:   
-    - command:   
-      - kube-controller-manager   
-      - --allocate-node-cidrs=true    
-      - --authentication-kubeconfig=/etc/kubernetes/controller-manager.conf   
-      - --authorization-kubeconfig=/etc/kubernetes/controller-manager.conf   
-      - --bind-address=0.0.0.0  #改为0.0.0.0   
-  ......   
+`  spec:`      
+`    containers:`      
+`    - command:`   
+`      - kube-controller-manager`       
+`      - --allocate-node-cidrs=true`        
+`      - --authentication-kubeconfig=/etc/kubernetes/controller-manager.conf`      
+`      - --authorization-kubeconfig=/etc/kubernetes/controller-manager.conf`       
+`      - --bind-address=0.0.0.0  #改为0.0.0.0`      
+`  ......`       
   
 - 创建 kube-scheduler & controller-manager 对应 Service   
 因为 Prometheus Operator 配置监控对象 serviceMonitor 是根据 label 选取 Service 来进行监控关联的，   
