@@ -1,5 +1,5 @@
 # 部署监控平台
-** 需提前部署好nfs持久化存储 **
+**需提前部署好nfs持久化存储**
 
 ## 一、修改 Service 端口设置
 ### 1、修改 prometheus-service.yaml 文件
